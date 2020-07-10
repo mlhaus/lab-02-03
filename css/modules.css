@@ -1,3 +1,21 @@
+#search {
+  font-size: 14px;
+  padding: 8px;
+}
+
+#howManyToView {
+  margin: 0 10px;
+  /* padding: 8px; */
+}
+
+#pageSelector span {
+  padding: 3px;
+}
+
+#pageSelector .currentPage {
+  outline: 1px dashed grey;
+}
+
 .spinner {
   position: absolute;
   top: 0;

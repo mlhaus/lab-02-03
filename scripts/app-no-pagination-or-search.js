@@ -11,7 +11,6 @@ $(function() {
     .then((data) => {
       data.forEach(creatureObj => {
         const creature = new Creature(creatureObj);
-        Creature.prototype.allCreatures.push(creature);
         Creature.prototype.addToFilter(creature);
         $('#photo-gallery').append(creature.toHtml());
       });
@@ -19,24 +18,11 @@ $(function() {
     .then(() => {
       Creature.prototype.renderFilter();
       handleTypeFilter();
-      handleSearch();
       $('.spinner').fadeOut(500);
       $('#photo-gallery').fadeIn(500);
     });
 
 });
-
-function handleSearch() {
-  $('#search').on('input', function() {
-    $('.creature').hide();
-    let lookup = $('#search').val().toLowerCase();
-    Creature.prototype.allCreatures.forEach(function(creature) {
-      if(creature.title.toLowerCase().indexOf(lookup) >= 0 || creature.keyword.toLowerCase().indexOf(lookup) >= 0) {
-        $(`.creature[data-id="${creature.id}"]`).fadeIn();
-      }
-    });
-  });
-}
 
 function handleTypeFilter() {
   $('#keyword-filter').on('change', function() {
@@ -54,11 +40,8 @@ function Creature(obj) {
     this[key] = obj[key];
   }
   this.keyword = obj.keyword.charAt(0).toUpperCase() + obj.keyword.slice(1);
-  this.id = ++Creature.creatureCount;
 }
 
-Creature.creatureCount = 0;
-Creature.prototype.allCreatures = [];
 Creature.prototype.allKeywords = [];
 
 Creature.prototype.toHtml = function() {

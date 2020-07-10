@@ -34,7 +34,7 @@ As a user, I want the image to be displayed in a larger size and with the descri
 
 We added a detail view which will display the image in larger detail in the center of the screen with a colored background. When the user clicks off of the image, they return to the grid view. We used a transition/animation to show and hide the detail view of an image.
 
-## Stretch Goal: Fuzzy search (Wednesday)
+## Stretch Goal: Fuzzy search (Wednesday) - DONE
 As a user, I want the ability to search my images so that I can view only the images containing specific titles or keywords.
 
-We added an input element to allow users to search for an image by title or keyword. We write a regular expression pattern to create a fuzzy search so that the results are narrowed down and displayed every time the user enters or removes a character from the input.
+I added an input element to allow users to search for an image by title or keyword. The results are narrowed down and displayed every time the user enters or removes a character from the input.
