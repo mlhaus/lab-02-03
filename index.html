@@ -7,7 +7,7 @@
     <link href="css/styles.css" rel="stylesheet">
 
     <script id="creature-template" type="text/x-tmpl-mustache">
-      <article class="horned-creature" data-keyword="{{keyword}}" data-horns="{{horns}}">
+      <article class="creature" data-keyword="{{keyword}}" data-horns="{{horns}}">
         <h2>{{title}}</h2>
         <img src="{{image_url}}" alt="{{title}}">
         <p>{{{description}}}</p>
@@ -18,9 +18,12 @@
   <body>
     <header>
       <h1>The Gallery of Horns</h1>
-      <select id="keyword-filter">
-        <option value="default">Filter by Keyword</option>
-      </select>
+      <div id="filter-sort-search">
+        <select id="keyword-filter">
+          <option value="default">Filter by Keyword</option>
+        </select>
+      </div>
+      
     </header>
     <main>
       <div class="spinner">

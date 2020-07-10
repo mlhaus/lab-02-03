@@ -1,0 +1,10 @@
+.spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1em;
+}
+
+.fa {
+  margin-right: 0.5em;
+}

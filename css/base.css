@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+main {
+  background-color: #eee;
+  padding: 2em;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.creature {
+  width: 250px;
+  padding: 20px;
+  margin: 1em;
+  background-color: white;
+  box-shadow: 5px 5px 5px #999;
+}
+
+.creature h2 {
+  margin: 0.25em 0 0.5em;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.creature img {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  max-width: 100%;
+}
+
+.creature p {
+  margin: 1em 0 0.5em;
+  line-height: 1.25em;
+}
+
