@@ -24,10 +24,10 @@ As a user, I want all of the images to be displayed in a consistent manner, so t
 
 I created a Mustache template in the HTML.
 
-## Feature 3: Sort the images (Wednesday)
+## Feature 3: Sort the images (Wednesday) - DONE
 As a user, I want to be able to sort the images so that there is an order to their rendering.
 
-We added the ability for the user to sort the images by title or by number of horns.
+I added the ability for the user to sort the images by title or by number of horns.
 
 ## Stretch Goal: Detail view (Wednesday)
 As a user, I want the image to be displayed in a larger size and with the description shown so that I can view the details of a single image.

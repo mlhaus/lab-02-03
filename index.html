@@ -10,6 +10,8 @@
       <article class="creature" data-id="{{id}}" data-keyword="{{keyword}}" data-horns="{{horns}}">
         <h2>{{title}}</h2>
         <img src="{{image_url}}" alt="{{title}}">
+        <p><span>Keyword:</span> {{keyword}}<br>
+          <span>Number of Horns:</span> {{horns}}</p>
         <p>{{{description}}}</p>
       </article>
     </script>
@@ -23,11 +25,12 @@
           <select id="keyword-filter">
             <option value="default">Filter by Keyword</option>
           </select>
-          <select id="order-by">
+          <select id="sort-by">
+            <option value="default">Sort by</option>
             <option value="alpha">Title A-Z</option>
             <option value="alpha-rev">Title Z-A</option>
-            <option value="alpha-rev">Horns 0-&infin;</option>
-            <option value="alpha-rev">Horns &infin;-0</option>
+            <option value="horns">Horns 0-&infin;</option>
+            <option value="horns-rev">Horns &infin;-0</option>
           </select>
           <form>
             <input type="text" placeholder="Search by title or keyword" id="search" size="50">
