@@ -6,7 +6,7 @@ As a user, I want to view the images on the page so that I can browse the photo 
 
 I used jQuery and Ajax to read data from a json file.
 
-## Feature #2: Filter images (Tuesday)
+## Feature #2: Filter images (Tuesday) - DONE
 As a user, I want to be able to filter the images so that I can view only images that match a keyword.
 
 ## Feature #3: Style the application (Tuesday) - DONE
