@@ -1,6 +1,7 @@
 'use strict';
 
 $(function() {
+  $('#photo-gallery').hide();
   const ajaxSettings = {
     method: 'get',
     dataType: 'json'
@@ -12,6 +13,10 @@ $(function() {
         const creature = new Creature(creatureObj);
         $('#photo-gallery').append(creature.toHtml());
       });
+    })
+    .then(() => {
+      $('.spinner').fadeOut(500);
+      $('#photo-gallery').fadeIn(500);
     });
 
 });

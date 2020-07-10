@@ -7,11 +7,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-header h1 {
+header {
   font-weight: bold;
   font-size: 2em;
   margin: 0.5em 0;
   text-align: center;
+}
+
+header h1 {
+  margin: 0;
 }
 
 main {
@@ -47,3 +51,7 @@ main {
   line-height: 1.25em;
 }
 
+footer {
+  text-align: center;
+  margin: 1em 0;
+}
