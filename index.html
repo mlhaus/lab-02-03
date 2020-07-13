@@ -12,6 +12,15 @@
         <img src="{{image_url}}" alt="{{title}}">
         <p><span>Keyword:</span> {{keyword}}<br>
           <span>Number of Horns:</span> {{horns}}</p>
+        <p>Click to learn more</p>
+      </article>
+    </script>
+
+    <script id="modal-template" type="text/x-tmpl-mustache">
+      <article class="large-creature">
+        <i class="fa fa-times"></i>
+        <h2>{{title}}</h2>
+        <img src="{{image_url}}" alt="{{title}}">
         <p>{{{description}}}</p>
       </article>
     </script>
@@ -22,36 +31,34 @@
       <header>
         <h1>The Gallery of Horns</h1>
         <div id="filter-sort-search">
-          <select id="keyword-filter">
-            <option value="default">Filter by Keyword</option>
-          </select>
-          <select id="sort-by">
-            <option value="default">Sort by</option>
-            <option value="alpha">Title A-Z</option>
-            <option value="alpha-rev">Title Z-A</option>
-            <option value="horns">Horns 0-&infin;</option>
-            <option value="horns-rev">Horns &infin;-0</option>
-          </select>
-          <form>
-            <input type="text" placeholder="Search by title or keyword" id="search" size="50">
+          <div>Filter: 
+            <select id="keyword-filter">
+              <option value="">All</option>
+            </select>
+          </div>
+
+          <div>Sort by: 
+            <select id="sort-by">
+              <option value="alpha">Title A-Z</option>
+              <option value="alpha-rev">Title Z-A</option>
+              <option value="horns">Horns 0-&infin;</option>
+              <option value="horns-rev">Horns &infin;-0</option>
+            </select>
+          </div>
+          <form id="search">
+            <input type="text" placeholder="Search by title" size="20">
+            <input type="submit" value="Go">
           </form>
           <div id="pagination">
-            <div id="viewing">
+            <span id="viewing">
               <span id="firstVisible">1</span> - <span id="lastVisible">24</span> of <span id="outOf">100</span>
-              <select id="howManyToView">
-                <option value="12">12 items</option>
-                <option value="24">24 items</option>
-                <option value="999">All</option>
-              </select>
-            </div>
-            <div id="pageSelector">
+            </span>
+            <span id="pageSelector">
               <i class="fa fa-arrow-left"></i>
-              <span class="previousPage">1</span>
-              <span class="currentPage">2</span>
-              <span class="nextPage">3</span>
               <i class="fa fa-arrow-right"></i>
-            </div>
+            </span>
           </div>
+
         </div>
       </header>
       <main>
@@ -65,8 +72,17 @@
         <p>&copy; 2020 Marc Hauschildt</p>
       </footer>
     </div>
+    <div id="modal">
+      
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/mustache@latest"></script>
+    <script src="scripts/models/Creature.js"></script>
+    <script src="scripts/views/filter.js"></script>
+    <script src="scripts/views/sort.js"></script>
+    <script src="scripts/views/search.js"></script>
+    <script src="scripts/views/pagination.js"></script>
+    <script src="scripts/views/photoClick.js"></script>
     <script src="scripts/app.js"></script>
   </body>
 </html>

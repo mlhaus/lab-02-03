@@ -1,19 +1,23 @@
-#search {
+#search > input {
   font-size: 14px;
-  padding: 8px;
+  padding: 5px;
 }
 
-#howManyToView {
-  margin: 0 10px;
-  /* padding: 8px; */
+#keyword-filter, #sort-by {
+  padding: 0.3em;
 }
 
-#pageSelector span {
-  padding: 3px;
+#viewing {
+  margin-right: 1em;
 }
 
-#pageSelector .currentPage {
-  outline: 1px dashed grey;
+#pagination ::selection{
+  color: none;
+  background: none;
+}
+
+#pageSelector i {
+  cursor: pointer;
 }
 
 .spinner {
@@ -21,8 +25,50 @@
   top: 0;
   left: 0;
   padding: 1em;
+  margin-right: 0.5em;
 }
 
-.fa {
-  margin-right: 0.5em;
+#modal {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.fa-times {
+  color: black;
+  font-size: 2em;
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  top: 10px;
+}
+
+.large-creature {
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+  position: relative;
+  width: 500px;
+  min-height: 100px;
+  max-height: 80vh;
+  background-color: white;
+  margin: 10vh auto;
+  text-align: center;
+  padding: 20px;
+  overflow: auto;
+}
+
+.large-creature h2 {
+  font-size: 2.5em;
+}
+
+.large-creature img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 10px 0;
+  box-shadow: 5px 5px 5px #999;
+}
+
+.large-creature p {
+  font-size: 1.5em;
 }
